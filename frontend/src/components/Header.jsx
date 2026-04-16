@@ -39,7 +39,8 @@ const Header = () => {
             className="flex items-center gap-2"
           >
             <img
-              src="https://static.prod-images.emergentagent.com/jobs/8febe633-6cea-41b7-ae5d-1f65b3a5f664/images/173dff112b8c17d9b27eb2b529b5de6379c9359ccb6ddc0f6cdfdc69ade52722.png"
+              //src="https://static.prod-images.emergentagent.com/jobs/8febe633-6cea-41b7-ae5d-1f65b3a5f664/images/173dff112b8c17d9b27eb2b529b5de6379c9359ccb6ddc0f6cdfdc69ade52722.png"
+              src="https://customer-assets.emergentagent.com/job_sandeep-showcase/artifacts/ab4sczet_S.png"
               alt="SD Logo"
               className="h-10 w-10 object-contain"
             />
