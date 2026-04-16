@@ -39,7 +39,7 @@ const Certifications = () => {
         >
           <p className="mono-label mb-4 text-sky-600">Certifications</p>
           <h2 className="heading-section text-3xl sm:text-4xl text-slate-900 max-w-2xl">
-            AI & Generative AI
+            AI Certification
           </h2>
           <p className="text-slate-600 mt-4 max-w-2xl">
             Completed certifications in Generative AI and Claude AI, gaining hands-on experience across modern AI technologies and development practices.

@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowDown } from 'lucide-react';
+import { ArrowDown, Download } from 'lucide-react';
 
 const Hero = () => {
   return (
@@ -64,6 +64,14 @@ const Hero = () => {
               className="btn-secondary text-center"
             >
               Get In Touch
+            </a>
+            <a
+              href={`${process.env.REACT_APP_BACKEND_URL}/api/resume/download`}
+              data-testid="hero-cta-resume"
+              className="btn-secondary text-center flex items-center justify-center gap-2"
+            >
+              <Download size={18} />
+              Download Resume
             </a>
           </motion.div>
         </div>

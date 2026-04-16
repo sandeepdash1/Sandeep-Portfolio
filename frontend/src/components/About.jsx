@@ -34,7 +34,7 @@ const About = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mono-label mb-4 text-blue-600"
+          className="mono-label mb-8 text-blue-600"
         >
           About Me
         </motion.p>
@@ -48,16 +48,16 @@ const About = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="md:col-span-4"
           >
-            <div className="relative">
+            <div className="relative overflow-hidden rounded-2xl">
               <img
                 src="https://customer-assets.emergentagent.com/job_sandeep-showcase/artifacts/03t9kwbl_IMG_0845.jpeg"
                 alt="Sandeep Dash - Senior Software Engineer"
                 data-testid="profile-image"
-                className="profile-image w-full aspect-[3/4] object-cover object-top shadow-xl"
-                style={{ objectPosition: '50% 15%', transform: 'scale(1.1)' }}
+                className="profile-image w-full aspect-[3/4] object-cover shadow-xl"
+                style={{ objectPosition: '50% 20%' }}
               />
-              <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-blue-600 rounded-lg -z-10" />
             </div>
+            <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-blue-600 rounded-lg -z-10" />
           </motion.div>
 
           {/* Bio Content */}
