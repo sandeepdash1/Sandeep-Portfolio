@@ -5,19 +5,51 @@ const Skills = () => {
   const skillCategories = [
     {
       title: 'Programming Languages',
-      skills: ['Java', 'J2EE', 'JavaScript', 'HTML'],
+      skills: ['Java', 'J2EE'],
     },
     {
-      title: 'Frameworks & Technologies',
-      skills: ['Spring Boot', 'Spring MVC 5', 'Hibernate5', 'Microservices', 'REST API', 'Apache Camel', 'Kafka', 'Angular'],
+      title: 'Frameworks',
+      skills: ['Spring Boot', 'Spring MVC 5', 'Hibernate5', 'Microservices', 'REST API', 'Apache Camel', 'Struts', 'Kafka'],
     },
     {
-      title: 'Databases & Cloud',
-      skills: ['MySQL', 'Oracle', 'DB2', 'RDS', 'AWS', 'Azure'],
+      title: 'Web / Enterprise',
+      skills: ['HTML', 'JavaScript', 'Angular', 'Postman'],
     },
     {
-      title: 'Tools & Development',
-      skills: ['Git', 'SVN', 'Maven', 'Eclipse', 'IntelliJ IDEA', 'Tomcat', 'Splunk', 'JIRA', 'Postman'],
+      title: 'RDBMS',
+      skills: ['MySQL', 'Oracle', 'DB2', 'RDS'],
+    },
+    {
+      title: 'Web Servers',
+      skills: ['Tomcat 6/7/8/9', 'Liberty'],
+    },
+    {
+      title: 'Cloud Platforms',
+      skills: ['AWS', 'Azure'],
+    },
+    {
+      title: 'IDE',
+      skills: ['Eclipse', 'Visual Studio Code', 'STS', 'RAD', 'IntelliJ IDEA'],
+    },
+    {
+      title: 'Version Control',
+      skills: ['Git', 'SVN'],
+    },
+    {
+      title: 'Build / Deployment',
+      skills: ['Maven'],
+    },
+    {
+      title: 'Monitoring Tools',
+      skills: ['Splunk', 'Lens'],
+    },
+    {
+      title: 'Operating Systems',
+      skills: ['Windows', 'Ubuntu 16.04', 'Linux'],
+    },
+    {
+      title: 'Agile Methodologies',
+      skills: ['Agile/Scrum', 'JIRA'],
     },
   ];
 
@@ -46,23 +78,23 @@ const Skills = () => {
         </motion.div>
 
         {/* Skills Bento Grid */}
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {skillCategories.map((category, categoryIndex) => (
             <motion.div
               key={category.title}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: categoryIndex * 0.1 }}
+              transition={{ duration: 0.5, delay: categoryIndex * 0.05 }}
               data-testid={`skill-category-${categoryIndex}`}
-              className="bento-item p-6 lg:p-8 shadow-sm"
+              className="bento-item p-6 shadow-sm"
             >
-              <h3 className="mono-label mb-6 text-purple-600">{category.title}</h3>
-              <div className="flex flex-wrap gap-3">
+              <h3 className="mono-label mb-4 text-purple-600">{category.title}</h3>
+              <div className="flex flex-wrap gap-2">
                 {category.skills.map((skill) => (
                   <span
                     key={skill}
-                    data-testid={`skill-${skill.toLowerCase().replace(/\s+/g, '-')}`}
+                    data-testid={`skill-${skill.toLowerCase().replace(/[\s/]+/g, '-')}`}
                     className="skill-tag"
                   >
                     {skill}

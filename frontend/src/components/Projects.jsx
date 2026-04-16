@@ -17,8 +17,8 @@ const Projects = () => {
       imageUrl: 'https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&h=600&fit=crop',
     },
     {
-      title: 'Fund Transfer System',
-      description: 'Engineered secure fund transfer modules (Intra, NEFT, IMPS) processing 5,000+ daily transactions with 99.99% success rate. Extensive knowledge of various Java developing projects with proven project management skills.',
+      title: 'Reconciliation Systems - Federal Bank',
+      description: 'Engineered secure reconciliation modules processing 5,000+ daily transactions with 99.99% success rate. Extensive knowledge of various Java developing projects with proven project management skills.',
       techStack: ['Spring Boot', 'Oracle', 'REST API', 'Maven', 'Eclipse'],
       imageUrl: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=600&fit=crop',
     },

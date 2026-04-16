@@ -53,7 +53,8 @@ const About = () => {
                 src="https://customer-assets.emergentagent.com/job_sandeep-showcase/artifacts/03t9kwbl_IMG_0845.jpeg"
                 alt="Sandeep Dash - Senior Software Engineer"
                 data-testid="profile-image"
-                className="profile-image w-full aspect-square object-cover object-top shadow-xl"
+                className="profile-image w-full aspect-[3/4] object-cover object-top shadow-xl"
+                style={{ objectPosition: '50% 15%', transform: 'scale(1.1)' }}
               />
               <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-blue-600 rounded-lg -z-10" />
             </div>

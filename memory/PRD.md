@@ -5,9 +5,12 @@ Create a portfolio website based on https://sandeep-dash.lovable.app/ for Sandee
 
 ## User Choices
 - **Content**: Same as reference (Sandeep Dash, Senior Software Engineer details)
-- **Design**: Swiss Brutalist dark theme with high contrast (design agent decided)
+- **Design**: Light theme with colorful section backgrounds (user requested)
 - **Features**: Hero, About, Skills, Projects, Contact form
 - **Contact Form**: Simple form with submission message (no email backend)
+- **Profile Image**: User's uploaded image
+- **Headline**: "Crafting Scalable Software Solutions"
+- **Projects**: Added MetLife SBR project with detailed description
 
 ## Architecture
 - **Frontend**: React 19 with Tailwind CSS, Framer Motion animations
@@ -24,14 +27,14 @@ Create a portfolio website based on https://sandeep-dash.lovable.app/ for Sandee
 
 ## What's Been Implemented (Jan 2026)
 - [x] Header with glass-morphism navigation
-- [x] Hero section with animated entrance
-- [x] About section with grayscale-to-color profile image hover
-- [x] Skills bento grid with tech tags
-- [x] Projects cards with hover effects
-- [x] Contact form with MongoDB integration
+- [x] Hero section with animated entrance, headline "Crafting Scalable Software Solutions"
+- [x] About section with user's profile image (uploaded)
+- [x] Skills bento grid with tech tags (purple accent)
+- [x] Projects cards with hover effects - 4 projects including MetLife SBR
+- [x] Contact form with MongoDB integration (yellow accent)
 - [x] Footer with social links
 - [x] Backend /api/contact endpoint for form submissions
-- [x] Grain texture overlay for visual depth
+- [x] Light theme with colorful gradient sections (blue hero, purple skills, green projects, yellow contact)
 
 ## Testing Status
 - Backend: 100% (5/5 endpoints working)

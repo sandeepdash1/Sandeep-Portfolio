@@ -16,6 +16,7 @@ const Header = () => {
   const navLinks = [
     { name: 'About', href: '#about' },
     { name: 'Skills', href: '#skills' },
+    { name: 'Certifications', href: '#certifications' },
     { name: 'Projects', href: '#projects' },
     { name: 'Contact', href: '#contact' },
   ];
@@ -33,10 +34,13 @@ const Header = () => {
           <a
             href="#"
             data-testid="logo-link"
-            className="text-slate-900 font-bold text-xl tracking-tight"
-            style={{ fontFamily: 'var(--font-heading)' }}
+            className="flex items-center gap-2"
           >
-            SD.
+            <img
+              src="https://static.prod-images.emergentagent.com/jobs/8febe633-6cea-41b7-ae5d-1f65b3a5f664/images/173dff112b8c17d9b27eb2b529b5de6379c9359ccb6ddc0f6cdfdc69ade52722.png"
+              alt="SD Logo"
+              className="h-10 w-10 object-contain"
+            />
           </a>
 
           {/* Desktop Navigation */}
