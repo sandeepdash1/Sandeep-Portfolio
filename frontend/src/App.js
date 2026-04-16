@@ -3,6 +3,7 @@ import './App.css';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
+import Experience from './components/Experience';
 import Skills from './components/Skills';
 import Certifications from './components/Certifications';
 import Projects from './components/Projects';
@@ -11,7 +12,6 @@ import Footer from './components/Footer';
 
 function App() {
   useEffect(() => {
-    // Smooth scroll behavior for anchor links
     const handleAnchorClick = (e) => {
       const href = e.target.getAttribute('href');
       if (href && href.startsWith('#')) {
@@ -32,23 +32,17 @@ function App() {
 
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900">
-      {/* Grain overlay (hidden in light mode) */}
       <div className="grain-overlay" />
-      
-      {/* Navigation */}
       <Header />
-      
-      {/* Main content */}
       <main>
         <Hero />
         <About />
+        <Experience />
         <Skills />
         <Certifications />
         <Projects />
         <Contact />
       </main>
-      
-      {/* Footer */}
       <Footer />
     </div>
   );

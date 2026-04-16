@@ -73,6 +73,34 @@ def generate_resume_pdf() -> bytes:
     elements.append(Paragraph("<bullet>&bull;</bullet> Generative AI Bootcamp - Growth School (LLMs, Prompt Engineering, AI-Powered App Development)", bullet_style))
     elements.append(Paragraph("<bullet>&bull;</bullet> Claude 101 - Anthropic (Claude AI Fundamentals, Effective Prompt Techniques, Building with Claude API)", bullet_style))
 
+    # Work Experience
+    elements.append(Paragraph("WORK EXPERIENCE", section_head))
+
+    work_exp = [
+        {
+            "company": "Cognizant Solutions Pvt Ltd",
+            "role": "Senior Associate",
+            "period": "Jul 2021 - Jun 2025",
+            "location": "Bengaluru, India",
+        },
+        {
+            "company": "Splenta Systems Pvt Ltd",
+            "role": "Senior Software Engineer",
+            "period": "Dec 2019 - Jul 2021",
+            "location": "Bengaluru, India",
+        },
+        {
+            "company": "E-Square Software India Pvt Ltd",
+            "role": "Software Engineer",
+            "period": "May 2019 - Nov 2019",
+            "location": "Bengaluru, India",
+        },
+    ]
+    for w in work_exp:
+        elements.append(Paragraph(f"<b>{w['company']}</b> - {w['role']}", body))
+        elements.append(Paragraph(f"{w['period']}  |  {w['location']}", body_muted))
+        elements.append(Spacer(1, 4))
+
     # Projects
     elements.append(Paragraph("FEATURED PROJECTS", section_head))
 
