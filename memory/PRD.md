@@ -26,15 +26,16 @@ Create a portfolio website based on https://sandeep-dash.lovable.app/ for Sandee
 6. Responsive design with mobile navigation
 
 ## What's Been Implemented (Jan 2026)
-- [x] Header with glass-morphism navigation
+- [x] Header with glass-morphism navigation and custom SD logo
 - [x] Hero section with animated entrance, headline "Crafting Scalable Software Solutions"
-- [x] About section with user's profile image (uploaded)
-- [x] Skills bento grid with tech tags (purple accent)
-- [x] Projects cards with hover effects - 4 projects including MetLife SBR
-- [x] Contact form with MongoDB integration (yellow accent)
-- [x] Footer with social links
+- [x] About section with user's profile image (uploaded, zoomed for professional look)
+- [x] Skills bento grid - 12 categories with complete skills list
+- [x] Certifications section - Generative AI Bootcamp & Claude 101 with certificate images + lightbox
+- [x] Projects cards - 4 projects including MetLife SBR and Reconciliation Systems (Federal Bank)
+- [x] Contact section with direct contact info (no form)
+- [x] Footer with GitHub and LinkedIn social links (correct URLs)
 - [x] Backend /api/contact endpoint for form submissions
-- [x] Light theme with colorful gradient sections (blue hero, purple skills, green projects, yellow contact)
+- [x] Light theme with colorful gradient sections (blue hero, purple skills, sky certs, green projects, yellow contact)
 
 ## Testing Status
 - Backend: 100% (5/5 endpoints working)

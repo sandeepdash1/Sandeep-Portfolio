@@ -1,23 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { BrainCircuit, MessageSquare, Cpu } from 'lucide-react';
+import { BrainCircuit, Bot, X } from 'lucide-react';
 
 const Certifications = () => {
-  const highlights = [
+  const [lightboxImage, setLightboxImage] = useState(null);
+
+  const certifications = [
     {
       icon: BrainCircuit,
-      title: 'Large Language Models (LLMs)',
-      description: 'Hands-on experience working with state-of-the-art large language models and understanding their architecture.',
+      title: 'Generative AI Bootcamp',
+      issuer: 'Growth School',
+      image: 'https://customer-assets.emergentagent.com/job_sandeep-showcase/artifacts/yyk02qhz_GenAI.jfif',
+      highlights: ['Large Language Models (LLMs)', 'Prompt Engineering & AI Workflows', 'AI-Powered Application Development'],
     },
     {
-      icon: MessageSquare,
-      title: 'Prompt Engineering & AI Workflows',
-      description: 'Expertise in crafting effective prompts and designing end-to-end AI-powered workflows.',
-    },
-    {
-      icon: Cpu,
-      title: 'AI-Powered Application Development',
-      description: 'Building intelligent applications that leverage generative AI capabilities for real-world use cases.',
+      icon: Bot,
+      title: 'Claude 101',
+      issuer: 'Anthropic',
+      image: 'https://customer-assets.emergentagent.com/job_sandeep-showcase/artifacts/0qs9iwkx_Claude.jfif',
+      highlights: ['Claude AI Fundamentals', 'Effective Prompt Techniques', 'Building with Claude API'],
     },
   ];
 
@@ -36,36 +37,92 @@ const Certifications = () => {
           transition={{ duration: 0.6 }}
           className="mb-16"
         >
-          <p className="mono-label mb-4 text-sky-600">Certification</p>
+          <p className="mono-label mb-4 text-sky-600">Certifications</p>
           <h2 className="heading-section text-3xl sm:text-4xl text-slate-900 max-w-2xl">
-            Generative AI
+            AI & Generative AI
           </h2>
           <p className="text-slate-600 mt-4 max-w-2xl">
-            Completed certification in Generative AI, gaining hands-on experience across modern AI technologies and development practices.
+            Completed certifications in Generative AI and Claude AI, gaining hands-on experience across modern AI technologies and development practices.
           </p>
         </motion.div>
 
-        {/* Highlights Grid */}
-        <div className="grid md:grid-cols-3 gap-8">
-          {highlights.map((item, index) => (
+        {/* Certifications Grid */}
+        <div className="grid md:grid-cols-2 gap-8">
+          {certifications.map((cert, index) => (
             <motion.div
-              key={item.title}
+              key={cert.title}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              data-testid={`cert-item-${index}`}
-              className="bento-item p-8 shadow-sm text-center"
+              transition={{ duration: 0.5, delay: index * 0.15 }}
+              data-testid={`cert-card-${index}`}
+              className="bento-item overflow-hidden shadow-sm group"
             >
-              <div className="w-14 h-14 flex items-center justify-center bg-sky-50 rounded-2xl text-sky-600 mx-auto mb-5">
-                <item.icon size={28} />
+              {/* Certificate Image */}
+              <div
+                className="relative overflow-hidden cursor-pointer"
+                onClick={() => setLightboxImage(cert.image)}
+                data-testid={`cert-image-${index}`}
+              >
+                <img
+                  src={cert.image}
+                  alt={`${cert.title} Certificate`}
+                  className="w-full h-56 object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4">
+                  <span className="text-white text-sm font-medium bg-black/50 px-4 py-1.5 rounded-full backdrop-blur-sm">
+                    View Certificate
+                  </span>
+                </div>
               </div>
-              <h3 className="text-slate-900 font-semibold text-lg mb-3">{item.title}</h3>
-              <p className="text-slate-500 text-sm leading-relaxed">{item.description}</p>
+
+              {/* Certificate Details */}
+              <div className="p-6 lg:p-8">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 flex items-center justify-center bg-sky-50 rounded-xl text-sky-600">
+                    <cert.icon size={22} />
+                  </div>
+                  <div>
+                    <h3 className="text-slate-900 font-semibold text-lg">{cert.title}</h3>
+                    <p className="text-slate-500 text-sm">{cert.issuer}</p>
+                  </div>
+                </div>
+                <ul className="space-y-2">
+                  {cert.highlights.map((item) => (
+                    <li key={item} className="flex items-center gap-2 text-slate-600 text-sm">
+                      <span className="w-1.5 h-1.5 bg-sky-500 rounded-full flex-shrink-0" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </motion.div>
           ))}
         </div>
       </div>
+
+      {/* Lightbox Modal */}
+      {lightboxImage && (
+        <div
+          data-testid="cert-lightbox"
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 backdrop-blur-sm p-4"
+          onClick={() => setLightboxImage(null)}
+        >
+          <button
+            onClick={() => setLightboxImage(null)}
+            data-testid="lightbox-close"
+            className="absolute top-6 right-6 text-white hover:text-slate-300 transition-colors"
+          >
+            <X size={32} />
+          </button>
+          <img
+            src={lightboxImage}
+            alt="Certificate"
+            className="max-w-4xl max-h-[85vh] w-full object-contain rounded-lg shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
+          />
+        </div>
+      )}
     </section>
   );
 };
