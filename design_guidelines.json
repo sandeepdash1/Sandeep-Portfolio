@@ -1,0 +1,132 @@
+{
+  "theme": {
+    "archetype": "4_swiss_and_high_contrast",
+    "mode": "dark",
+    "description": "High-end developer portfolio. Swiss Brutalist & High-Contrast mixed with subtle Retro-Futurism. Objective, rigid, functional, using striking monochrome elements with sharp electric blue accents.",
+    "colors": {
+      "background": "#000000",
+      "foreground": "#FFFFFF",
+      "muted": "#A1A1AA",
+      "muted_foreground": "#71717A",
+      "border": "rgba(255, 255, 255, 0.1)",
+      "primary": "#2563EB",
+      "primary_foreground": "#FFFFFF",
+      "card": "#09090B",
+      "card_foreground": "#FFFFFF",
+      "surface_glass": "rgba(0, 0, 0, 0.6)"
+    },
+    "typography": {
+      "heading_font": "Cabinet Grotesk",
+      "body_font": "IBM Plex Sans",
+      "mono_font": "JetBrains Mono",
+      "rules": [
+        "Use tight tracking (tracking-tighter) for all Headings > 32px.",
+        "Labels, overlines, and tags MUST use JetBrains Mono, uppercase, and wide tracking (tracking-[0.2em]).",
+        "Body text should use leading-relaxed for optimal readability.",
+        "Never use Inter for headings."
+      ],
+      "sizes": {
+        "h1": "text-4xl sm:text-5xl lg:text-6xl tracking-tighter font-black",
+        "h2": "text-3xl sm:text-4xl lg:text-5xl tracking-tight font-bold",
+        "h3": "text-xl sm:text-2xl font-semibold",
+        "body": "text-base text-zinc-400",
+        "mono_label": "text-xs font-mono uppercase tracking-widest text-zinc-500"
+      }
+    },
+    "spacing": {
+      "philosophy": "Generous Spacing. Use py-24 or py-32 for section padding. Tension is created through asymmetry and empty space.",
+      "grid_rules": "Use visible grid lines (border-white/10) for technical sections like Skills. For Bento grids, ensure there is breathing room (gap-8)."
+    },
+    "surfaces": {
+      "cards": "Flat background (bg-zinc-950), 1px solid border (border-white/10), 0px or 4px max border-radius. No soft shadows. Use sharp inner contrasts.",
+      "nav": "Glassmorphism with heavy blur (backdrop-blur-xl bg-black/60) and a delicate 1px bottom border (border-white/10).",
+      "buttons": "Square or very slightly rounded (rounded-sm). Primary CTA is solid white text on primary blue bg. Secondary buttons are transparent with 1px white/20 border and hover:bg-white/10."
+    }
+  },
+  "content": {
+    "personal_info": {
+      "name": "Sandeep Dash",
+      "title": "Senior Software Engineer",
+      "bio": "A motivated Senior Software Engineer with 6+ years of experience in Java, Spring Boot, and enterprise application development. Specialized in API modernization, microservices architecture, and leading cross-functional teams. Proven track record of generating significant business value and improving system performance through innovative technical solutions.",
+      "location": "Coventry, UK",
+      "email": "sandeepdash108@gmail.com",
+      "phone": "+44-7799557005"
+    },
+    "skills": {
+      "programming_languages": ["Java", "J2EE", "JavaScript", "HTML"],
+      "frameworks": ["Spring Boot", "Spring MVC 5", "Hibernate5", "Microservices", "REST API", "Apache Camel", "Kafka", "Angular"],
+      "databases_cloud": ["MySQL", "Oracle", "DB2", "RDS", "AWS", "Azure"],
+      "tools": ["Git", "SVN", "Maven", "Eclipse", "IntelliJ IDEA", "Tomcat", "Splunk", "JIRA", "Postman"]
+    },
+    "projects": [
+      {
+        "title": "API Modernization - Project ARGO",
+        "description": "Led API modernization for Canada Life, migrating legacy OSGI application to Spring Boot, boosting performance and security.",
+        "tech_stack": ["Spring Boot", "Microservices", "DB2", "Splunk", "Maven"],
+        "image_url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&h=600&fit=crop"
+      },
+      {
+        "title": "Fund Transfer System",
+        "description": "Engineered secure fund transfer modules (Intra, NEFT, IMPS) processing 5,000+ daily transactions with 99.99% success rate.",
+        "tech_stack": ["Spring Boot", "Oracle", "REST API", "Maven", "Eclipse"],
+        "image_url": "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=600&fit=crop"
+      },
+      {
+        "title": "Eclipse IDE Development",
+        "description": "Developed Eclipse-based IDE for Bosch using JavaScript and RCP, improving data processing efficiency by 35%.",
+        "tech_stack": ["Java", "JavaScript", "Eclipse RCP", "Git", "Maven"],
+        "image_url": "https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=800&h=600&fit=crop"
+      }
+    ]
+  },
+  "media": {
+    "profile_image": "https://sandeep-dash.lovable.app/lovable-uploads/c45cd1a9-a924-4e09-bc64-36ea5d02c5a6.png",
+    "background_texture": "grain",
+    "project_images": [
+      "https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=800&h=600&fit=crop"
+    ]
+  },
+  "layout_and_components": {
+    "global": {
+      "scrolling": "Use 'lenis' for momentum scrolling.",
+      "icons": "Use 'lucide-react'.",
+      "animations": "Framer Motion. Use subtle fade-in-up (y: 20, opacity: 0 -> y: 0, opacity: 1) and stagger transitions for grid items."
+    },
+    "hero_section": {
+      "layout": "Massive typography, left-aligned or asymmetric. Introduce tension by having empty space on the right. No photo in the hero.",
+      "components": [
+        "H1: 'Sandeep Dash' or 'Building Enterprise Systems'",
+        "Subtitle: 'Senior Software Engineer | Java & Spring Boot'",
+        "CTA Buttons: 'View My Work', 'Get In Touch' (Primary and Secondary styles)."
+      ]
+    },
+    "about_section": {
+      "layout": "2-column asymmetric grid (md:grid-cols-12). Profile image takes col-span-4, bio text takes col-span-7 with col-start-6.",
+      "image_treatment": "Grayscale profile image by default, transitions to color on hover. Hard 0px border-radius, thin border-white/10 frame."
+    },
+    "skills_section": {
+      "layout": "Technical Grid (Bento style). Use border-collapse on the parent and border-white/10 on items to expose the grid skeleton.",
+      "tags": "Use small monospace tags (JetBrains Mono) for individual skills with a very subtle bg-white/5 background."
+    },
+    "projects_section": {
+      "layout": "Vertical stack of large cards or a sticky scroll section.",
+      "card_style": "Image on top/side with a max-h-[40vh] to keep it sleek. Overlay tech stack as monospace tags. The title should be large and expressive."
+    },
+    "contact_section": {
+      "layout": "Minimalist bento layout. Left side: Direct contact info (Email, Phone, Location). Right side: Contact form.",
+      "form_components": "Use custom-styled Shadcn Form, Input, Textarea. Give them sharp edges (rounded-none), bg-transparent, and border-white/20. Focus states should have a sharp blue ring (ring-blue-600)."
+    }
+  },
+  "instructions_to_main_agent": [
+    "Execute `yarn add lenis framer-motion lucide-react clsx tailwind-merge`",
+    "Install Google Fonts in index.css: Cabinet Grotesk (from Fontshare) or similar if unavailable, IBM Plex Sans, and JetBrains Mono.",
+    "Do NOT use Inter for any headings.",
+    "Implement a deep dark mode. Set body background to black (#000000) and text to white (#FFFFFF).",
+    "Build the UI completely with HTML/Tailwind for structural components, avoiding overly-heavy Shadcn components for marketing layouts (except the Contact Form where Shadcn is preferred).",
+    "Add 'data-testid' to all interactive elements (links, buttons, form inputs).",
+    "Ensure the hero section does not use the profile image. Place the profile image in the About section.",
+    "Create a noise/grain texture overlay for the whole page using a subtle CSS mix-blend-mode overlay to kill digital flatness."
+  ]
+}
