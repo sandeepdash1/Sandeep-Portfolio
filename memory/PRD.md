@@ -30,6 +30,7 @@ Create a portfolio website based on https://sandeep-dash.lovable.app/ for Sandee
 - [x] Hero section with animated entrance, headline "Crafting Scalable Software Solutions"
 - [x] About section with user's profile image (uploaded, properly contained with overflow hidden)
 - [x] Experience timeline - 3 companies (Cognizant, Splenta, E-Square) with logos, alternating layout
+- [x] Education section - Siksha 'O' Anusandhan University, B.Tech Mechanical Engineering (2010-2014) with university logo
 - [x] Skills bento grid - 12 categories with complete skills list
 - [x] Certifications section titled "AI Certification" - Generative AI Bootcamp & Claude 101 with certificate images + lightbox
 - [x] Projects cards - 4 projects including MetLife SBR and Reconciliation Systems (Federal Bank)

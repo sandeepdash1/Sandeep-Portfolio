@@ -101,6 +101,12 @@ def generate_resume_pdf() -> bytes:
         elements.append(Paragraph(f"{w['period']}  |  {w['location']}", body_muted))
         elements.append(Spacer(1, 4))
 
+    # Education
+    elements.append(Paragraph("EDUCATION", section_head))
+    elements.append(Paragraph("<b>Siksha 'O' Anusandhan University</b>", body))
+    elements.append(Paragraph("Bachelor of Technology | Mechanical Engineering  |  Aug 2010 - Jul 2014", body_muted))
+    elements.append(Spacer(1, 4))
+
     # Projects
     elements.append(Paragraph("FEATURED PROJECTS", section_head))
 
