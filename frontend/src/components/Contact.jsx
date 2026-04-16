@@ -63,7 +63,7 @@ const Contact = () => {
     <section
       id="contact"
       data-testid="contact-section"
-      className="py-24 lg:py-32 px-6 lg:px-8 section-divider"
+      className="py-24 lg:py-32 px-6 lg:px-8 bg-contact"
     >
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
@@ -74,11 +74,11 @@ const Contact = () => {
           transition={{ duration: 0.6 }}
           className="mb-16"
         >
-          <p className="mono-label mb-4">Get In Touch</p>
-          <h2 className="heading-section text-3xl sm:text-4xl text-white max-w-2xl">
+          <p className="mono-label mb-4 text-amber-700">Get In Touch</p>
+          <h2 className="heading-section text-3xl sm:text-4xl text-slate-900 max-w-2xl">
             Let's Work Together
           </h2>
-          <p className="text-zinc-400 mt-4 max-w-2xl">
+          <p className="text-slate-600 mt-4 max-w-2xl">
             Looking for a Senior Software Engineer with proven expertise in Java, Spring Boot, and enterprise solutions? Let's discuss how I can contribute to your team's success.
           </p>
         </motion.div>
@@ -91,7 +91,7 @@ const Contact = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            <h3 className="text-white text-xl font-semibold mb-8">Direct Contact</h3>
+            <h3 className="text-slate-900 text-xl font-semibold mb-8">Direct Contact</h3>
             <div className="space-y-6">
               {contactInfo.map((item) => (
                 <a
@@ -100,12 +100,12 @@ const Contact = () => {
                   data-testid={`contact-${item.label.toLowerCase()}`}
                   className="flex items-center gap-4 group"
                 >
-                  <div className="w-12 h-12 flex items-center justify-center border border-white/10 text-zinc-400 group-hover:text-blue-500 group-hover:border-blue-500/30 transition-all">
+                  <div className="w-12 h-12 flex items-center justify-center bg-white rounded-lg shadow-sm text-slate-500 group-hover:text-blue-600 group-hover:shadow-md transition-all">
                     <item.icon size={20} />
                   </div>
                   <div>
                     <p className="mono-label text-xs mb-1">{item.label}</p>
-                    <p className="text-white group-hover:text-blue-400 transition-colors">
+                    <p className="text-slate-900 group-hover:text-blue-600 transition-colors font-medium">
                       {item.value}
                     </p>
                   </div>
@@ -124,13 +124,13 @@ const Contact = () => {
             {isSubmitted ? (
               <div
                 data-testid="form-success"
-                className="bento-item p-8 lg:p-12 flex flex-col items-center justify-center text-center h-full"
+                className="bento-item p-8 lg:p-12 flex flex-col items-center justify-center text-center h-full shadow-sm"
               >
                 <CheckCircle size={48} className="text-green-500 mb-4" />
-                <h3 className="text-white text-xl font-semibold mb-2">
+                <h3 className="text-slate-900 text-xl font-semibold mb-2">
                   Message Sent!
                 </h3>
-                <p className="text-zinc-400">
+                <p className="text-slate-600">
                   Thank you for reaching out. I'll get back to you soon.
                 </p>
                 <button
@@ -145,7 +145,7 @@ const Contact = () => {
               <form
                 onSubmit={handleSubmit}
                 data-testid="contact-form"
-                className="bento-item p-8 lg:p-12"
+                className="bento-item p-8 lg:p-12 shadow-sm"
               >
                 <div className="space-y-6">
                   <div>

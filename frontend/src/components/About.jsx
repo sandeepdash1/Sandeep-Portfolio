@@ -25,7 +25,7 @@ const About = () => {
     <section
       id="about"
       data-testid="about-section"
-      className="py-24 lg:py-32 px-6 lg:px-8 section-divider"
+      className="py-24 lg:py-32 px-6 lg:px-8 bg-white"
     >
       <div className="max-w-7xl mx-auto">
         {/* Section label */}
@@ -34,7 +34,7 @@ const About = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mono-label mb-4"
+          className="mono-label mb-4 text-blue-600"
         >
           About Me
         </motion.p>
@@ -50,12 +50,12 @@ const About = () => {
           >
             <div className="relative">
               <img
-                src="https://sandeep-dash.lovable.app/lovable-uploads/c45cd1a9-a924-4e09-bc64-36ea5d02c5a6.png"
+                src="https://customer-assets.emergentagent.com/job_sandeep-showcase/artifacts/03t9kwbl_IMG_0845.jpeg"
                 alt="Sandeep Dash - Senior Software Engineer"
                 data-testid="profile-image"
-                className="profile-image w-full aspect-square object-cover border border-white/10"
+                className="profile-image w-full aspect-square object-cover object-top shadow-xl"
               />
-              <div className="absolute inset-0 border border-white/10 pointer-events-none" />
+              <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-blue-600 rounded-lg -z-10" />
             </div>
           </motion.div>
 
@@ -67,10 +67,10 @@ const About = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="md:col-span-7 md:col-start-6"
           >
-            <h2 className="heading-section text-3xl sm:text-4xl text-white mb-6">
+            <h2 className="heading-section text-3xl sm:text-4xl text-slate-900 mb-6">
               Sandeep Dash
             </h2>
-            <p className="text-zinc-400 text-lg leading-relaxed mb-8">
+            <p className="text-slate-600 text-lg leading-relaxed mb-8">
               A motivated Senior Software Engineer with 6+ years of experience in
               Java, Spring Boot, and enterprise application development. Specialized
               in API modernization, microservices architecture, and leading
@@ -90,12 +90,12 @@ const About = () => {
                   transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
                   className="flex gap-4"
                 >
-                  <div className="flex-shrink-0 w-10 h-10 flex items-center justify-center border border-white/10 text-blue-500">
+                  <div className="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-blue-50 rounded-lg text-blue-600">
                     <item.icon size={20} />
                   </div>
                   <div>
-                    <h3 className="text-white font-semibold mb-1">{item.title}</h3>
-                    <p className="text-zinc-500 text-sm">{item.description}</p>
+                    <h3 className="text-slate-900 font-semibold mb-1">{item.title}</h3>
+                    <p className="text-slate-500 text-sm">{item.description}</p>
                   </div>
                 </motion.div>
               ))}

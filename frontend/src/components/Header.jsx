@@ -33,7 +33,7 @@ const Header = () => {
           <a
             href="#"
             data-testid="logo-link"
-            className="text-white font-bold text-xl tracking-tight"
+            className="text-slate-900 font-bold text-xl tracking-tight"
             style={{ fontFamily: 'var(--font-heading)' }}
           >
             SD.
@@ -46,7 +46,7 @@ const Header = () => {
                 key={link.name}
                 href={link.href}
                 data-testid={`nav-${link.name.toLowerCase()}`}
-                className="text-zinc-400 hover:text-white transition-colors duration-200 text-sm font-medium"
+                className="text-slate-600 hover:text-slate-900 transition-colors duration-200 text-sm font-medium"
               >
                 {link.name}
               </a>
@@ -63,7 +63,7 @@ const Header = () => {
           {/* Mobile Menu Button */}
           <button
             data-testid="mobile-menu-toggle"
-            className="md:hidden text-white p-2"
+            className="md:hidden text-slate-900 p-2"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -74,14 +74,14 @@ const Header = () => {
         {isMobileMenuOpen && (
           <div
             data-testid="mobile-menu"
-            className="md:hidden py-4 border-t border-white/10"
+            className="md:hidden py-4 border-t border-slate-200 bg-white"
           >
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
                 data-testid={`mobile-nav-${link.name.toLowerCase()}`}
-                className="block py-3 text-zinc-400 hover:text-white transition-colors"
+                className="block py-3 text-slate-600 hover:text-slate-900 transition-colors"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {link.name}

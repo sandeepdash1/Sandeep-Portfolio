@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <section
       data-testid="hero-section"
-      className="min-h-screen flex flex-col justify-center px-6 lg:px-8 pt-20"
+      className="min-h-screen flex flex-col justify-center px-6 lg:px-8 pt-20 hero-gradient"
     >
       <div className="max-w-7xl mx-auto w-full">
         <div className="max-w-4xl">
@@ -15,7 +15,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="mono-label mb-6"
+            className="mono-label mb-6 text-blue-600"
           >
             Senior Software Engineer
           </motion.p>
@@ -25,11 +25,11 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="heading-display text-4xl sm:text-5xl lg:text-7xl text-white mb-8"
+            className="heading-display text-4xl sm:text-5xl lg:text-7xl text-slate-900 mb-8"
           >
-            Building Enterprise
+            Crafting Scalable
             <br />
-            <span className="text-zinc-500">Systems That Scale</span>
+            <span className="text-blue-600">Software Solutions</span>
           </motion.h1>
 
           {/* Description */}
@@ -37,11 +37,11 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="text-lg sm:text-xl text-zinc-400 max-w-2xl mb-12 leading-relaxed"
+            className="text-lg sm:text-xl text-slate-600 max-w-2xl mb-12 leading-relaxed"
           >
             6+ years of experience in full-stack development, API modernization,
-            and leading high-performance teams to deliver scalable software
-            solutions.
+            and leading high-performance teams to deliver enterprise-grade
+            software solutions.
           </motion.p>
 
           {/* CTAs */}
@@ -78,7 +78,7 @@ const Hero = () => {
           <a
             href="#about"
             data-testid="scroll-indicator"
-            className="flex flex-col items-center text-zinc-500 hover:text-white transition-colors"
+            className="flex flex-col items-center text-slate-400 hover:text-blue-600 transition-colors"
           >
             <span className="mono-label mb-2">Scroll</span>
             <ArrowDown size={20} className="animate-bounce" />
