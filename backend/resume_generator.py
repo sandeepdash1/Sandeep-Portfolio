@@ -82,23 +82,42 @@ def generate_resume_pdf() -> bytes:
             "role": "Senior Associate",
             "period": "Jul 2021 - Jun 2025",
             "location": "Bengaluru, India",
+            "bullets": [
+                "Managing API Modernization for project ARGO for Canada Life, migrating legacy code base to Spring Boot to boost performance and security.",
+                "Led MetLife's SBR unit, managing liability financing and executive benefit plans while driving Agile practices.",
+                "Generated revenue of $343,828 with 40% profit for Business.",
+                "Supported onshore team resulting in 30% faster project timeline and 25% reduction in post-launch issue resolution time.",
+            ],
         },
         {
             "company": "Splenta Systems Pvt Ltd",
             "role": "Senior Software Engineer",
             "period": "Dec 2019 - Jul 2021",
             "location": "Bengaluru, India",
+            "bullets": [
+                "Developed fund transfer modules (Intra, NEFT, IMPS) with bulk upload/transaction features for corporate accounts.",
+                "Built transaction alerts and wallet operations (block/unblock), improving customer service by 25%.",
+                "Created T+1 reconciliation portal for failed transactions, enhancing financial transparency.",
+                "Delivered user-friendly service platform that boosted customer retention by 24%.",
+            ],
         },
         {
             "company": "E-Square Software India Pvt Ltd",
             "role": "Software Engineer",
             "period": "May 2019 - Nov 2019",
             "location": "Bengaluru, India",
+            "bullets": [
+                "Developed Eclipse-based IDE for Bosch using JavaScript, RCP, and RCPTT, improving data processing efficiency by 35%.",
+                "Built online recruitment management system with Spring Boot, resulting in 30% boost in recruitment efficiency.",
+                "Contributed to building a global Learning Management System (LMS) using Spring and Hibernate.",
+            ],
         },
     ]
     for w in work_exp:
         elements.append(Paragraph(f"<b>{w['company']}</b> - {w['role']}", body))
         elements.append(Paragraph(f"{w['period']}  |  {w['location']}", body_muted))
+        for b in w["bullets"]:
+            elements.append(Paragraph(f"<bullet>&bull;</bullet> {b}", bullet_style))
         elements.append(Spacer(1, 4))
 
     # Education
